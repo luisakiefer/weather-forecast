@@ -17,36 +17,40 @@
   <body>
     <div class="container">
       <!-- Search Form -->
-      <div>
-        <form>
-          <input type="text" />
-          <input type="submit" value="search" />
-        </form>
-        <button>Current Location</button>
-      </div>
-
-      <!-- Current Weather -->
-
-      <div>
-        <div>
-          <h1 id="location">City</h1>
-          <div id="date">Tue time</div>
-          <div id="description">Cloudy</div>
+      <div class="current-weather-container">
+        <div class="clearfix">
+          <form class="float-left">
+            <input type="text" placeholder="Enter a city" />
+            <input type="submit" value="search" class="btn btn-primary" />
+          </form>
+          <button class="float-left btn btn-current-location">
+            Current Location
+          </button>
         </div>
-      </div>
 
-      <div class="row">
-        <div class="col-md-6">
-          <div class="weather-temp-today">
-            <h2>20°C</h2>
+        <!-- Current Weather -->
+
+        <div>
+          <div>
+            <h1 id="location">City</h1>
+            <div id="date">Tue time</div>
+            <div id="description">Cloudy</div>
           </div>
         </div>
-      </div>
 
-      <div class="row">
-        <div class="col-md-6">
-          <div class="rain">Precipitation <span id="precipitation"></span></div>
-          <div class="wind">Wind <span id="wind-speed"></span></div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="weather-temp-today">
+              <h2>20°C</h2>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="rain">
+              Precipitation <span id="precipitation"></span>
+            </div>
+            <div class="wind">Wind <span id="wind-speed"></span></div>
+          </div>
         </div>
       </div>
     </div>
