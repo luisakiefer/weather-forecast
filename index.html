@@ -23,10 +23,19 @@
           <form id="search-city-form">
             <div class="row">
               <div class="col-6">
-            <input type="text" autocomplete="off" placeholder="How's the weather in..." id="search-input" class="search-city" />
+            <input 
+            type="search" 
+            autocomplete="off" 
+            placeholder="How's the weather in..." 
+            id="search-input" 
+            class="search-city" />
             </div>
             <div class="col-3">
-            <input type="submit" value="search" class="btn btn-primary" id="submit-search" />
+            <input 
+            type="submit" 
+            value="Search" 
+            class="btn btn-primary" 
+            id="submit-search" />
             </div>
             <div class="col-3">
           <button class="btn btn-current-location">
@@ -42,7 +51,8 @@
 
         <div>
           <div>
-            <div id="city"><h1 >City</h1></div>
+            <div>
+              <h1 id="city-name">city</h1></div>
             <ul>
             <li id="date"></li>
             <li id="description">Description</li>
@@ -58,16 +68,19 @@
           </div>
 
           <div class="col-md-6">
-            <div class="rain">
-              Precipitation <span id="precipitation"></span>
+            <ul>
+              <li class="rain" id="humidity">Humidity:</li>
+              <li class="wind" id="wind-speed">Wind Speed:</li>
+            </ul>
             </div>
-            <div class="wind">Wind <span id="wind-speed"></span></div>
+            
           </div>
         </div>
 
         
       </div>
     </div>
+    <footer>Coded by Luísa Kiefer, hosted on netlify</footer>
     <script src="src/index.js"></script>
   </body>
 </html>

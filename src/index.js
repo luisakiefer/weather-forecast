@@ -22,21 +22,22 @@ let date = document.querySelector("#date");
 date.innerHTML = currentDate();
 
 function displayWeather(response) {
-  let city = document.querySelector("h1");
+  let city = document.querySelector("#city-name");
   city.innerHTLM = response.data.name;
 
   let currentTemp = document.querySelector("#temperature");
   currentTemp.innerHTML = `${Math.round(response.data.main.temp)} °C`;
 
-  let rain = document.querySelector("#precipitation");
-  rain.innerHTML = `${response.data.main.humidity}%`;
+  let rain = document.querySelector("#humidity");
+  rain.innerHTML = `Humidity: ${response.data.main.humidity}%`;
 
-  let wind = document.querySelector("#wind");
-  wind.innerHTML = Math.round(response.data.main.wind.speed);
+  let wind = document.querySelector("#wind-speed");
+  wind.innerHTML = `Wind Speed: ${Math.round(response.data.wind.speed)} m/s`;
+  console.log(wind);
 
   let description = document.querySelector("#description");
-  description.innerHTML = response.data.weather[0].main;
-  console.log(response.data.weather[0].main);
+  description.innerHTML = response.data.weather[0].description;
+  console.log(response.data.weather[0].description);
 }
 
 function searchCity(city) {
@@ -47,8 +48,8 @@ function searchCity(city) {
 
 function submitSearch(event) {
   event.preventDefault();
-  let city = document.querySelector("#search-input").value;
-  searchCity(city);
+  let cityInput = document.querySelector("#search-input");
+  searchCity(cityInput.value);
 }
 
 let form = document.querySelector("#search-city-form");
