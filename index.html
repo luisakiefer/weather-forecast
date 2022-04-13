@@ -26,7 +26,7 @@
             <input type="text" autocomplete="off" placeholder="How's the weather in..." id="search-input" class="search-city" />
             </div>
             <div class="col-3">
-            <input type="submit" value="search" class="btn btn-primary" />
+            <input type="submit" value="search" class="btn btn-primary" id="submit-search" />
             </div>
             <div class="col-3">
           <button class="btn btn-current-location">
@@ -44,8 +44,8 @@
           <div>
             <h1 id="city">City</h1>
             <ul>
-            <li id="date">Tue time</li>
-            <li id="description">Cloudy</li>
+            <li id="date"></li>
+            <li id="description">Sunny</li>
             </ul>
           </div>
         </div>
@@ -53,7 +53,7 @@
         <div class="row">
           <div class="col-md-6">
             <div class="current-temp">
-              <h2>20°C</h2>
+              <h2 id="temperature">20°C</h2>
             </div>
           </div>
 
