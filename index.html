@@ -17,16 +17,26 @@
   <body>
     <div class="container">
       <!-- Search Form -->
+
       <div class="current-weather-container">
         <div class="clearfix">
-          <form class="float-left">
-            <input type="text" placeholder="Enter a city" />
+          <form>
+            <div class="row">
+              <div class="col-6">
+            <input type="text" placeholder="Enter a city" id="search-input" class="search-city" />
+            </div>
+            <div class="col-3">
             <input type="submit" value="search" class="btn btn-primary" />
-          </form>
-          <button class="float-left btn btn-current-location">
+            </div>
+            <div class="col-3">
+          <button class="btn btn-current-location">
             Current Location
           </button>
+          </div>
+          </form>
+          </div>
         </div>
+      
 
         <!-- Current Weather -->
 
@@ -51,6 +61,11 @@
             </div>
             <div class="wind">Wind <span id="wind-speed"></span></div>
           </div>
+        </div>
+
+        <div>
+          <span>wed</span>
+          <span>fri</span>
         </div>
       </div>
     </div>

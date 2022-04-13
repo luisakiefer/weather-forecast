@@ -3,3 +3,23 @@
   margin-top: 100px;
   border: 1px solid #000;
 }
+
+.search-city {
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+}
+
+.btn.btn-primary {
+  display: block;
+  margin: 0 auto;
+  background-color: red;
+  padding: 2px 20px;
+}
+
+.btn.btn-current-location {
+  display: block;
+  margin: 0 auto;
+  background-color: blue;
+  padding: 2px 10px;
+}
