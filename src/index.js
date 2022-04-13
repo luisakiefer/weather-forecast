@@ -22,18 +22,21 @@ let date = document.querySelector("#date");
 date.innerHTML = currentDate();
 
 function displayWeather(response) {
-  document.querySelector("#city").innerHTLM = response.data.name;
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
-  document.querySelector(
-    "#precipitation"
-  ).innerHTML = `${response.data.main.humidity}%`;
-  document.querySelector("#wind").innerHTML = Math.round(
-    response.data.main.wind.speed
-  );
-  document.querySelector("#description").innerHTML =
-    response.data.weather[0].main;
+  let city = document.querySelector("h1");
+  city.innerHTLM = response.data.name;
+
+  let currentTemp = document.querySelector("#temperature");
+  currentTemp.innerHTML = `${Math.round(response.data.main.temp)} °C`;
+
+  let rain = document.querySelector("#precipitation");
+  rain.innerHTML = `${response.data.main.humidity}%`;
+
+  let wind = document.querySelector("#wind");
+  wind.innerHTML = Math.round(response.data.main.wind.speed);
+
+  let description = document.querySelector("#description");
+  description.innerHTML = response.data.weather[0].main;
+  console.log(response.data.weather[0].main);
 }
 
 function searchCity(city) {
