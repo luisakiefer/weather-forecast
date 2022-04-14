@@ -37,7 +37,6 @@ function displayWeather(response) {
 
   let description = document.querySelector("#description");
   description.innerHTML = response.data.weather[0].description;
-  console.log(response.data.weather[0].description);
 }
 
 function searchCity(city) {
@@ -46,13 +45,13 @@ function searchCity(city) {
   axios.get(apiUrl).then(displayWeather);
 }
 
-function submitSearch(event) {
+function searchCity(event) {
   event.preventDefault();
   let cityInput = document.querySelector("#search-input");
   searchCity(cityInput.value);
 }
 
-let form = document.querySelector("#search-city-form");
-form.addEventListener("submit", submitSearch);
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", searchCity);
 
 let tempElement = document.querySelector("#temperature");
