@@ -22,7 +22,7 @@ let date = document.querySelector("#date");
 date.innerHTML = currentDate();
 
 function displayWeather(response) {
-  
+  console.log(displayWeather(response));
   let city = document.querySelector("#city");
   city.innerHTLM = response.data.name;
 
