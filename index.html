@@ -18,7 +18,7 @@
     <div class="container">
       <!-- Search Form -->
 
-      <div class="current-weather-container">
+      <div class="weather-container">
         
           <form id="search-form" class="mb-3">
             <div class="row">
@@ -50,7 +50,7 @@
               <h1 id="city"></h1>
             <ul>
             <li id="date"></li>
-            <li id="description">Description</li>
+            <li id="description"></li>
             </ul>
           </div>
         </div>
@@ -63,14 +63,14 @@
               id="icon"
               class="float-left" />
 
-              <h2 id="temperature">20°C</h2>
+              <h2 id="temperature"></h2> <span class="units"> <a href="#" id="celsius-link" class="active">°C</a> | <a href="#" id="fahrenheit-link">°F</a></span>
             </div>
           </div>
 
           <div class="col-md-6">
             <ul>
-              <li class="rain" id="humidity">Humidity:</li>
-              <li class="wind" id="wind-speed">Wind Speed:</li>
+              <li class="rain" id="humidity"></li>
+              <li class="wind" id="wind-speed"></li>
             </ul>
             </div>
             
@@ -80,7 +80,7 @@
         
       </div>
     </div>
-    <footer>Coded by Luísa Kiefer, hosted on netlify</footer>
+    <footer>Coded by <a href="https://github.com/luisakiefer/weather-forecast" target="blank">Luísa Kiefer</a>, hosted on <a href="https://www.netlify.com/" target="blank">netlify</a></footer>
     <script src="src/index.js"></script>
   </body>
 </html>

@@ -22,23 +22,20 @@ let date = document.querySelector("#date");
 date.innerHTML = currentDate();
 
 function displayWeather(response) {
-
   let city = document.querySelector("#city");
-  city.innerHTML = response.data.name;
-
   let currentTemp = document.querySelector("#temperature");
-  currentTemp.innerHTML = `${Math.round(response.data.main.temp)} °C`;
-
   let rain = document.querySelector("#humidity");
-  rain.innerHTML = `Humidity: ${response.data.main.humidity}%`;
-
   let wind = document.querySelector("#wind-speed");
-  wind.innerHTML = `Wind Speed: ${Math.round(response.data.wind.speed)} m/s`;
-
   let description = document.querySelector("#description");
-  description.innerHTML = response.data.weather[0].description;
-
   let icon = document.querySelector("#icon");
+
+  celsiusTemp = response.data.main.temp;
+
+  city.innerHTML = response.data.name;
+  currentTemp.innerHTML = `${Math.round(celsiusTemp)} °C`;
+  rain.innerHTML = `Humidity: ${response.data.main.humidity}%`;
+  wind.innerHTML = `Wind Speed: ${Math.round(response.data.wind.speed)} m/s`;
+  description.innerHTML = response.data.weather[0].description;
   icon.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -58,7 +55,34 @@ function submitSearch(event) {
   search(cityInput.value);
 }
 
+function displayFahrenheitTemp(event) {
+  event.preventDefault();
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let tempElement = document.querySelector("#temperature");
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  tempElement.innerHTML = `${Math.round(fahrenheitTemp)} °F`;
+}
+
+function displayCelsiusTemp(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let tempElement = document.querySelector("#temperature");
+  tempElement.innerHTML = `${Math.round(celsiusTemp)} °C`;
+}
+
+let celsiusTemp = null;
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", submitSearch);
 
 let tempElement = document.querySelector("#temperature");
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemp);
+
+search("Porto Alegre");
