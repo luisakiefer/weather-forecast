@@ -34,7 +34,7 @@ function displayWeather(response) {
   city.innerHTML = response.data.name;
   currentTemp.innerHTML = `${Math.round(celsiusTemp)} °C`;
   rain.innerHTML = `Humidity: ${response.data.main.humidity}%`;
-  wind.innerHTML = `Wind Speed: ${Math.round(response.data.wind.speed)} m/s`;
+  wind.innerHTML = `Wind Speed: ${Math.round(response.data.wind.speed)} km/h`;
   description.innerHTML = response.data.weather[0].description;
   icon.setAttribute(
     "src",
