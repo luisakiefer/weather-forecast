@@ -14,73 +14,73 @@
     />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
+
   <body>
     <div class="container">
-      <!-- Search Form -->
-
-      <div class="weather-container">
-        
+      <!-- Search -->
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
           <form id="search-form" class="mb-3">
             <div class="row">
               <div class="col-9">
-            <input 
-            type="search" 
-            autocomplete="off" 
-            placeholder="How's the weather in..." 
-            id="search-input" 
-            class="form-control" />
-            </div>
-            <div class="col-3">
-            <input 
-            type="submit" 
-            value="search" 
-            class="btn btn-primary" 
-            id="submit-search" />
+                <input
+                  type="search"
+                  autocomplete="off"
+                  placeholder="How's the weather in..."
+                  id="search-input"
+                  class="form-control"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="search"
+                  class="btn btn-primary"
+                  id="submit-search"
+                />
+              </div>
             </div>
           </form>
-          </div>
-        </div>
-      
 
-        <!-- Current Weather -->
+          <!-- Current Weather -->
 
-        <div>
-          <div>
-            <div class="overview">
-              <h1 id="city"></h1>
+          <div class="overview">
+            <h1 id="city"></h1>
             <ul>
-            <li id="date"></li>
-            <li id="description"></li>
+              <li id="date"></li>
+              <li id="description"></li>
             </ul>
           </div>
-        </div>
 
-        <div class="row">
-          <div class="col-md-6">
-            <div class="current-temp">
-              <img src=""
-              alt="condition"
-              id="icon"
-              class="float-left" />
-
-              <h2 id="temperature"></h2> <span class="units"> <a href="#" id="celsius-link" class="active">°C</a> | <a href="#" id="fahrenheit-link">°F</a></span>
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix current-temp">
+                <img src="" alt="condition" id="icon" class="float-left" />
+                <div class="float-right">
+                  <h2 id="temperature"></h2>
+                  <span class="units">
+                    <a href="#" id="celsius-link" class="active">°C</a> |
+                    <a href="#" id="fahrenheit-link">°F</a></span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li class="rain" id="humidity"></li>
+                <li class="wind" id="wind-speed"></li>
+              </ul>
             </div>
           </div>
-
-          <div class="col-md-6">
-            <ul>
-              <li class="rain" id="humidity"></li>
-              <li class="wind" id="wind-speed"></li>
-            </ul>
-            </div>
-            
-          </div>
         </div>
-
-        
       </div>
     </div>
-    <footer>Coded by <a href="https://github.com/luisakiefer/weather-forecast" target="blank">Luísa Kiefer</a>, hosted on <a href="https://www.netlify.com/" target="blank">netlify</a></footer>
+    <footer>
+      Coded by
+      <a href="https://github.com/luisakiefer/weather-forecast" target="blank"
+        >Luísa Kiefer</a
+      >, hosted on <a href="https://www.netlify.com/" target="blank">netlify</a>
+    </footer>
     <script src="src/index.js"></script>
   </body>
 </html>

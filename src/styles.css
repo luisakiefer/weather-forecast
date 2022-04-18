@@ -1,21 +1,24 @@
 h1 {
-  margin-left: 15px;
+  margin-left: 0;
+  color: #142d4c;
 }
 
 h2 {
   margin-left: 15px;
-  color: grey;
+  color: #142d4c;
 }
 
 ul {
   margin: 0;
   padding: 0;
+  color: #142d4c;
 }
 
 li {
   list-style: none;
   line-height: 20px;
   text-transform: capitalize;
+  margin-left: -30px;
 }
 
 footer {
@@ -24,25 +27,45 @@ footer {
   margin-top: 5px;
 }
 
-.weather-container {
+.weather-app-wrapper {
   max-width: 600px;
   margin: 30px auto;
 }
 
-.container {
-  padding: 30px;
-  margin-top: 100px;
+.weather-app {
+  padding: 20px;
+  margin-top: 60px;
   border: 1px solid rgb(86, 86, 86);
   border-radius: 10px;
-  background: radial-gradient(
-    circle at 10% 20%,
-    rgb(242, 235, 243) 0%,
-    rgb(234, 241, 249) 90.1%
-  );
+  background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+}
+
+.overview {
+  margin-bottom: 20px;
+}
+
+.float-left,
+.float-right {
+  display: inline-block;
+}
+
+.current-temp img {
+  margin-right: 5px;
+  height: 50px;
+  width: 50px;
+  position: relative;
+  background-color: aqua;
+}
+
+.current-temp .units {
+  position: relative;
+  font-size: 16px;
+  top: -45px;
+  margin-left: 105px;
 }
 
 .current-temp .active {
-  color: red;
+  color: #9fd3c7;
   cursor: default;
 }
 
@@ -78,4 +101,5 @@ footer {
 .wind {
   color: grey;
   line-height: 20px;
+  color: #385170;
 }
