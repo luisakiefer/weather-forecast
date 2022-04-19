@@ -49,6 +49,11 @@ footer {
   display: inline-block;
 }
 
+.float-right h2 {
+  margin: 0;
+  display: inline-block;
+}
+
 .current-temp img {
   margin-right: 5px;
   height: 60px;
@@ -60,8 +65,7 @@ footer {
 .current-temp .units {
   position: relative;
   font-size: 16px;
-  top: -45px;
-  margin-left: 105px;
+  top: -25px;
 }
 
 .current-temp .active {
