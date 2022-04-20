@@ -115,14 +115,14 @@ footer {
 }
 
 .weather-forecast-date {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .weather-forecast-max {
-  font-size: 16px;
+  font-size: 13px;
 }
 
 .weather-forecast-min {
-  font-size: 16px;
+  font-size: 13px;
   opacity: 0.5;
 }
